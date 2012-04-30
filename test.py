@@ -11,8 +11,9 @@ class TestRequestPlugin(unittest.TestCase):
         self.plugin = self.app.install(bottle_request.Plugin)
 
         @self.app.get('/')
-        def test(request):
+        def test(request, response):
             self.assertEqual(bottle.request, request)
+            self.assertEqual(bottle.response, response)
         self.app({'PATH_INFO':'/', 'REQUEST_METHOD':'GET'}, lambda x, y: None)
 
     def test_without_keyword(self):

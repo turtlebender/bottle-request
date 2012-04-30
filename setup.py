@@ -2,7 +2,7 @@ from setuptools import setup
 
 setup(
         name="bottle-request",
-        version="0.1.0",
+        version="0.2.0",
         url="http://github.com/turtlebender/bottle-request/",
         description="Plugin to give bottle a 'stateless' request object",
         author="Tom Howe",
